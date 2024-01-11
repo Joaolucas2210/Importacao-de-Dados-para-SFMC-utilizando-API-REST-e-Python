@@ -14,8 +14,6 @@ Acesse Setup -> Apps -> Installed Packages.
 Crie um novo pacote instalado e anote o Client ID e Client Secret gerados.
 1.2. Criação da Data Extension:
 
-Consulte o guia fornecido no artigo para criar uma Data Extension e obter a chave externa.
-
 # 1.3. Credenciais:
 
 Client ID:
