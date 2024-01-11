@@ -12,7 +12,8 @@ Para começar, você precisa configurar suas credenciais e criar uma Data Extens
 
 Acesse Setup -> Apps -> Installed Packages.
 Crie um novo pacote instalado e anote o Client ID e Client Secret gerados.
-1.2. Criação da Data Extension:
+
+# 1.2. Criação da Data Extension:
 
 # 1.3. Credenciais:
 
