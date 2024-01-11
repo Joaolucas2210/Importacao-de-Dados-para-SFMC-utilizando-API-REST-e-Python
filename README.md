@@ -1,6 +1,5 @@
 # Importação de Dados para SFMC utilizando API REST e Python
 
-Uma breve descrição sobre o que esse projeto faz e para quem ele é
 
 Importação de Dados para o Salesforce Marketing Cloud via Python REST API
 
