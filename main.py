@@ -1,14 +1,17 @@
 import requests
 import json
+import os
+from dotenv import load_dotenv
 
 class MarketingCloudIntegration:
 
     def __init__(self):
-        self.client_id = ''
-        self.client_secret = ''
-        self.subdomain = ''
-        self.data_extension_key = ''
-        self.rest_url = ''
+        load_dotenv()
+        self.client_id = os.environ.get('MC_CLIENT_ID')
+        self.client_secret = os.environ.get('MC_CLIENT_SECRET')
+        self.subdomain = os.environ.get('MC_SUBDOMAIN')
+        self.data_extension_key = os.environ.get('MC_DATA_EXTENSION_KEY')
+        self.rest_url = f'https://{self.subdomain}.rest.marketingcloudapis.com'
 
     def get_access_token(self):
         endpoint = f'https://{self.subdomain}.auth.marketingcloudapis.com/v2/token'
@@ -24,7 +27,7 @@ class MarketingCloudIntegration:
         return response_data['access_token']
 
     def send_data_to_data_extension(self, access_token):
-        endpoint = f'{self.rest_url}/data/v2/async/dataextensions/key:{self.data_extension_key}/rows'
+        endpoint = f'{self.rest_url}/data/v1/async/dataextensions/key:{self.data_extension_key}/rows'
         headers = {
             'Authorization': f'Bearer {access_token}',
             'Content-Type': 'application/json'
